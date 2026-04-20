@@ -1,0 +1,16 @@
+import os
+
+# API KEYS
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
+# MODEL NAMES (in use)
+DEEPSEEK_MODEL = "deepseek-reasoner"
+
+# ROUTING SETTINGS
+USE_MULTI_MODEL = False
+
+API_KEY = os.getenv("GOOGLE_API_KEY")
+
+TEMPERATURE = 0.0 
+MAX_TOKENS = 64
