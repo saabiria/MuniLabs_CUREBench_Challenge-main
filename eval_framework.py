@@ -128,7 +128,6 @@ class LocalModel(BaseModel):
             import torch
             
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-
             # Build model loading kwargs to avoid conflicts
             model_kwargs = {
                "torch_dtype": torch.bfloat16,
@@ -137,17 +136,16 @@ class LocalModel(BaseModel):
             }
 
           # Add any extra kwargs that aren't conflicting
-              for key, value in kwargs.items():
+            for key, value in kwargs.items():
               if key not in model_kwargs:
-              model_kwargs[key] = value
+                model_kwargs[key] = value
 
-self.model = AutoModelForCausalLM.from_pretrained(
-    self.model_name,
-    **model_kwargs
-)
+            self.model = AutoModelForCausalLM.from_pretrained(
+            self.model_name,
+            **model_kwargs)
             
             logger.info(f"Loaded local model: {self.model_name}")
-        except ImportError as e:
+            except ImportError as e:
             logger.error(f"Failed to import local model dependencies: {e}")
             raise
     
