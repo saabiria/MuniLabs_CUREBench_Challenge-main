@@ -145,7 +145,7 @@ class LocalModel(BaseModel):
             **model_kwargs)
             
             logger.info(f"Loaded local model: {self.model_name}")
-            except ImportError as e:
+        except ImportError as e:
             logger.error(f"Failed to import local model dependencies: {e}")
             raise
     
