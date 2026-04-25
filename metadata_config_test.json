@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "model_name": "deepseek-llama-agent",
+    "model_name": "llama-agent",
     "model_type": "CustomAgent",
     "track": "agentic_reasoning",
     "base_model_type": "OpenWeighted",
