@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "model_name": "Llama-2-7b-chat-hf",
+    "model_name": "meta-llama/Llama-3.1-8B",
     "model_type": "CustomAgent",
     "track": "agentic_reasoning",
     "base_model_type": "OpenWeighted",
-    "base_model_name": "meta-llama/Llama-2-7b-chat-hf",
+    "base_model_name": "meta-llama/Llama-3.1-8B",
     "dataset": "curebench_testset_phase2.json",
     "additional_info": "Agentic RAG + Tool use",
     "average_tokens_per_question": "",
