@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "model_name": "DeepSeek + LLaMA Agent",
+    "model_name": "DeepSeek-LLaMA-Agent",
     "model_type": "CustomAgent",
     "track": "agentic_reasoning",
     "base_model_type": "API",
-    "base_model_name": "deepseek-chat / llama-3",
+    "base_model_name": "deepseek-ai/deepseek-llm-7b-chat",
     "dataset": "curebench_testset_phase2.json",
     "additional_info": "Agentic RAG + Tool use via OpenRouter",
     "average_tokens_per_question": "",
@@ -13,7 +13,7 @@
   },
   "dataset": {
     "dataset_name": "cure_bench_phase_1",
-    "dataset_path": "dataset/curebench_testset_phase2.json",
+    "dataset_path": "/content/datasets/curebench_testset_phase2.json",
     "description": "CureBench 2025 test questions"
   },
   "output_dir": "competition_test_results",
