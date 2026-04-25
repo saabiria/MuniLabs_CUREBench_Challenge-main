@@ -12,7 +12,7 @@
     "tool_category_coverage": ""
   },
   "dataset": {
-    "dataset_name": "cure_bench_phase_2",
+    "dataset_name": "curebench_testset_phase2.jsonl",
     "dataset_path": "/content/curebench_testset_phase2.jsonl",
     "description": "CureBench 2025 test questions"
   },
