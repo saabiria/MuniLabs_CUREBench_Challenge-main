@@ -128,13 +128,24 @@ class LocalModel(BaseModel):
             import torch
             
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-            self.model = AutoModelForCausalLM.from_pretrained(
-                self.model_name,
-                torch_dtype=torch.bfloat16,
-                device_map="auto",
-                quantization_config = BitsAndBytesConfig(load_in_8bit=True)
-                **kwargs
-            )
+
+            # Build model loading kwargs to avoid conflicts
+            model_kwargs = {
+               "torch_dtype": torch.bfloat16,
+              "device_map": "auto",
+              "quantization_config": BitsAndBytesConfig(load_in_8bit=True)
+            }
+
+          # Add any extra kwargs that aren't conflicting
+              for key, value in kwargs.items():
+              if key not in model_kwargs:
+              model_kwargs[key] = value
+
+self.model = AutoModelForCausalLM.from_pretrained(
+    self.model_name,
+    **model_kwargs
+)
+            
             logger.info(f"Loaded local model: {self.model_name}")
         except ImportError as e:
             logger.error(f"Failed to import local model dependencies: {e}")
