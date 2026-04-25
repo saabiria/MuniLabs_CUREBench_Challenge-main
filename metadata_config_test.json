@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "model_name": "llama-agent",
+    "model_name": "Llama-2-7b-chat-hf",
     "model_type": "CustomAgent",
     "track": "agentic_reasoning",
     "base_model_type": "OpenWeighted",
